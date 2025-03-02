@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso importante!</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .intro-container {
+            margin-top: 50px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(124, 206, 69);">Aviso importante!</h1>
+    <div class="intro-container">
+        <p style="text-align: justify;">Parabéns por chegar até aqui! Sabia que conseguiria! <br>
+        Como eu disse, são 10 enigmas. Você completou 50% do progresso, merece uma medalha. Toma! 🏅 <br>
+    Agora, vamos falar de coisa séria. A partir de agora, o jogo fica interessante. Os enigmas apartir de 
+agora ficam mais desafiadores do que os bobinhos anteriores. Uma dica, presta atenção nos mínimos detalhes.
+Às vezes, Não é nada disso que você acha que é... <br>
+Boa sorte!🍀</p>
+    </div>
+</body>
+</html>
+
+<div class="captcha-container">
+    <input type="checkbox" id="captcha" onclick="habilitarBotao()">
+    <label for="captcha" id="captcha-text">Pronto para a próxima fase?</label>
+</div>
+<button id="continuar" disabled onclick="window.location.href='enigma6.html'">Continuar</button>
+<script>
+    function habilitarBotao() {
+        const checkbox = document.getElementById("captcha");
+        const botao = document.getElementById("continuar");
+        if (checkbox.checked) {
+            botao.disabled = false;
+            botao.style.backgroundColor = "rgb(124, 206, 69)";
+        } else {
+            botao.disabled = true;
+            botao.style.backgroundColor = "black";
+        }
+    }
+</script>
+<style>
+    .captcha-container {
+        margin-top: 40px;
+    }
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: black;
+    }
+    button:disabled {
+        cursor: not-allowed;
+    }
+</style>
+</div>
+</body>
+</html>

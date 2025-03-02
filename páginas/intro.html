@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .intro-container {
+            margin-top: 50px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(124, 206, 69);">Introdução</h1>
+    <div class="intro-container">
+        <p style="text-align: justify;">Saudações, jogador! <br> Se você está lendo isso, significa que eu morri! Brincadeira
+        eu sempre quis falar isso haha <br> Voltando ao o que interessa. Esse site foi criado como um 
+    teste para meus estudos de programação, mas também serve como um quebra gelo entre nós porque,
+convenhamos, as férias estão bem chatinhas. Que tal se divertir um pouco então? <br>
+O site funciona assim: Ao clicar em <b>CONTINUAR</b>, você será direcionado a uma 
+série de enigmas bem legais para serem resolvidos. São 10 no total e cada avanço, eles serão cada vez
+mais difíceis. No final, terá uma mensagem especial escrita por mim especialmente para você! <br>
+Por fim, quero que saiba que infelizmente não aprendi ainda a criar um sistema de salvamento do progresso, 
+ou seja, se sair do site acidentalmente, terá que voltar do começo (por favor, não use disso para ter 
+vantagem no tempo. Seja honesto com esse mero programador). Quando terminar todos os enigmas, tire um
+print e me mande no WhatsApp. Farei questão dos futuros jogadores saberem que você terminou todos os
+enigmas com maestria! <br>
+Agora vamos começar! Marque a caixinha abaixo e se divirta!</p>
+    </div>
+</body>
+</html>
+
+<div class="captcha-container">
+    <input type="checkbox" id="captcha" onclick="habilitarBotao()">
+    <label for="captcha" id="captcha-text">Ao clicar, você concorda em se divertir!</label>
+</div>
+<button id="continuar" disabled onclick="window.location.href='enigma1.html'">Continuar</button>
+<script>
+    function habilitarBotao() {
+        const checkbox = document.getElementById("captcha");
+        const botao = document.getElementById("continuar");
+        if (checkbox.checked) {
+            botao.disabled = false;
+            botao.style.backgroundColor = "rgb(124, 206, 69)";
+        } else {
+            botao.disabled = true;
+            botao.style.backgroundColor = "black";
+        }
+    }
+</script>
+<style>
+    .captcha-container {
+        margin-top: 40px;
+    }
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: black;
+    }
+    button:disabled {
+        cursor: not-allowed;
+    }
+</style>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma 6</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: rgb(124, 206, 69);
+        }
+        .enigma-container {
+            margin-top: 20px;
+        }
+        input {
+            margin-top: 10px;
+            padding: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: rgb(124, 206, 69);
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>ENIGMA 6</h1>
+    <div class="enigma-container">
+        <img src="imagens/enigma 6.png" alt="Placa Mercosul" style="max-width: 40%; height: 40%;">
+    </div>
+    <input type="text" id="resposta" placeholder="Digite sua resposta...">
+    <button onclick="verificarResposta()">Enviar</button>
+</div>
+<script>
+    function verificarResposta() {
+        const resposta = document.getElementById("resposta").value.toLowerCase();
+        const respostaCorreta = "657c9ca"; // Altere aqui a resposta correta
+        if (resposta === respostaCorreta) {
+            alert("Correto! Você passou para o próximo enigma.");
+            window.location.href = 'enigma7.html'; // Altere para a próxima página
+        } else {
+            alert("Resposta incorreta. Tente novamente!");
+        }
+    }
+</script>
+<style>
+    .enigma-container {
+        margin-top: 40px;
+    }
+    input {
+        padding: 10px;
+        width: 80%;
+        margin-top: 10px;
+    }
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: rgb(124, 206, 69);
+    }
+</style>
+</body>
+</html>
+
+<div class="dica-container">
+    <button onclick="revelarDica()">Dica</button>
+    <p id="dica" style="display: none; color: white;">Letras podem ser números e números podem ser letras. Reflita!</p>
+</div>
+<script>
+    function revelarDica() {
+        var dica = document.getElementById("dica");
+        if (dica.style.display === "none") {
+            dica.style.display = "block";
+        } else {
+            dica.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

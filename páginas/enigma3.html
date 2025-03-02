@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma 3</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(124, 206, 69);">ENIGMA 3</h1>
+</body>
+</html>
+
+<div class="enigma-container">
+    <p id="enigma-text">Sou redondo, mas nem sempre sou cheio.<br>
+        Às vezes sumo, às vezes brilho. Alguns dizem que influencio o mar, outros fazem desejos ao me ver.<br>
+        Quem sou eu?</p>
+    <input type="text" id="resposta" placeholder="Digite sua resposta...">
+    <button onclick="verificarResposta()">Enviar</button>
+</div>
+<script>
+    function verificarResposta() {
+        const resposta = document.getElementById("resposta").value.toLowerCase();
+        const respostaCorreta = "lua"; // Altere aqui a resposta correta
+        if (resposta === respostaCorreta) {
+            alert("Correto! Você passou para o próximo enigma.");
+            window.location.href = 'enigma4.html'; // Altere para a próxima página
+        } else {
+            alert("Resposta incorreta. Tente novamente!");
+        }
+    }
+</script>
+<style>
+    .enigma-container {
+        margin-top: 40px;
+    }
+    input {
+        padding: 10px;
+        width: 80%;
+        margin-top: 10px;
+    }
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: rgb(124, 206, 69);
+    }
+</style>
+</body>
+</html>
+
+<div class="dica-container">
+    <button onclick="revelarDica()">Dica</button>
+    <p id="dica" style="display: none; color: white;">O véu da noite te observa</p>
+</div>
+<script>
+    function revelarDica() {
+        var dica = document.getElementById("dica");
+        if (dica.style.display === "none") {
+            dica.style.display = "block";
+        } else {
+            dica.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

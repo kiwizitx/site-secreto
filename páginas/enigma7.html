@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma 7</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(124, 206, 69);">ENIGMA 7</h1>
+</body>
+</html>
+
+<div class="enigma-container">
+    <p id="enigma-text">Onde tudo termina, a verdade desperta, <br>
+        Caminhos se fecham, a jornada é incerta. <br>
+        Outonos se vão, levando memórias, <br>
+        Mas cada adeus é parte da história. <br>
+        Estrelas apagam, mas brilham no fim, <br>
+        Çertos destinos, traçados assim. <br>
+        Os dias escorrem, sem mais hesitar. <br>
+         <br>
+        Tudo tem prazo, não dá pra evitar, <br>
+        As folhas que caem sussurram no vento, <br>
+        Mostrando que há beleza no tempo. <br>
+        Brilham os olhos na última cena, <br>
+        É no derradeiro que a vida se ordena. <br>
+        Morrer não é só desaparecer. <br>
+         <br>
+        Iniciar se renova no ato de ceder, <br>
+        Mesmo que doa, o fim é lição. <br>
+        Porque encerrar é libertação. <br>
+        O último tom de uma canção <br>
+        Revela o que foi sua real emoção. <br>
+        Terminar algo é deixar para trás, <br>
+        Apenas para recomeçar mais uma vez.</p>
+    <input type="text" id="resposta" placeholder="Digite sua resposta...">
+    <button onclick="verificarResposta()">Enviar</button>
+</div>
+<script>
+    function verificarResposta() {
+        const resposta = document.getElementById("resposta").value.toLowerCase();
+        const respostaCorreta = "o começo também importa"; // Altere aqui a resposta correta
+        if (resposta === respostaCorreta) {
+            alert("Correto! Você passou para o próximo enigma.");
+            window.location.href = 'enigma8.html'; // Altere para a próxima página
+        } else {
+            alert("Resposta incorreta. Tente novamente!");
+        }
+    }
+</script>
+<style>
+    .enigma-container {
+        margin-top: 40px;
+    }
+    input {
+        padding: 10px;
+        width: 80%;
+        margin-top: 10px;
+    }
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: rgb(124, 206, 69);
+    }
+</style>
+</body>
+</html>
+
+<div class="dica-container">
+    <button onclick="revelarDica()">Dica</button>
+    <p id="dica" style="display: none; color: white;">O final é tão importante assim?</p>
+</div>
+<script>
+    function revelarDica() {
+        var dica = document.getElementById("dica");
+        if (dica.style.display === "none") {
+            dica.style.display = "block";
+        } else {
+            dica.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

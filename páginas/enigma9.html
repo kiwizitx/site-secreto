@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma 9</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .enigma-container {
+            max-width: 600px;
+            text-align: justify;
+        }
+        h1 {
+            color: rgb(124, 206, 69);
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(124, 206, 69);
+        }
+        .dica-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ENIGMA 9</h1>
+    <div class="enigma-container">
+        <p>No vilarejo de Valedouro, existia uma lenda sobre um relógio antigo guardado 
+            na torre da cidade. Diziam que aquele mecanismo não marcava apenas as horas, mas também os 
+            momentos mais importantes da história do povoado. Certa vez, um velho historiador chamado Elias 
+            decidiu investigar a verdade por trás dessa relíquia. <br>
+            Em meio aos livros empoeirados da biblioteca municipal, encontrou um diário com uma anotação curiosa: 
+            "O tempo se divide em oito partes, mas apenas cinco são visíveis. Sete foram esquecidas e duas restam 
+            para serem reveladas. No fim, tudo se resume a zero." <br>
+            Intrigado, Elias seguiu para a torre. O relógio estava parado, marcando exatamente doze horas. 
+            Enquanto observava, percebeu pequenas marcas nas engrenagens, formando padrões que lembravam números. 
+            Quando somou suas descobertas, encontrou um último detalhe oculto na base do relógio: “A resposta está 
+            naqueles que contam a história”. <br>
+            Ele voltou ao diário e leu a anotação novamente. Seu coração acelerou ao perceber que os números 
+            estavam escondidos em palavras. A chave para o mistério estava bem diante dos seus olhos.<br>
+             <br>
+        <b>INCLUA VIRGULAS NA SUA RESPOSTA E NÃO COLOQUE ESPAÇO ENTRE ELAS!</b></p>
+        <input type="text" id="resposta" placeholder="Digite sua resposta...">
+        <button onclick="verificarResposta()">Enviar</button>
+        <div class="dica-container">
+            <button onclick="revelarDica()">Dica</button>
+            <p id="dica" style="display: none; color: white;">Algumas palavras têm mais valor do 
+                que parecem. Se conseguir enxergá-las como deveriam ser, o mistério será resolvido.</p>
+        </div>
+    </div>
+    <script>
+        function verificarResposta() {
+            const resposta = document.getElementById("resposta").value.toLowerCase();
+            const respostaCorreta = "8,5,7,2,0,12"; // Altere aqui a resposta correta
+            if (resposta === respostaCorreta) {
+                alert("Correto! Você passou para o próximo enigma.");
+                window.location.href = 'enigma10.html'; // Altere para a próxima página
+            } else {
+                alert("Resposta incorreta. Tente novamente!");
+            }
+        }
+        function revelarDica() {
+            var dica = document.getElementById("dica");
+            if (dica.style.display === "none") {
+                dica.style.display = "block";
+            } else {
+                dica.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

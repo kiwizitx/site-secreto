@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma 10</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .enigma-container {
+            margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        h1 {
+            color: rgb(124, 206, 69);
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(124, 206, 69);
+        }
+        .dica-container {
+            margin-top: 20px;
+        }
+        #dica {
+            display: none;
+            color: white;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ENIGMA 10</h1>
+
+    <div class="enigma-container">
+        <p id="enigma-text">
+            <b>O MAIS DIFÍCIL!</b><br><br>
+            Em uma noite chuvosa, o detetive Samuel Harper foi chamado para investigar um assassinato na mansão Holloway, um casarão isolado no alto da colina. A vítima, Leonard Sinclair, um empresário de 52 anos, foi encontrado sem vida em sua biblioteca, caído sobre sua escrivaninha com uma xícara de chá ainda quente ao lado.<br><br>
+
+            A cena do crime não apresentava sinais de arrombamento, e os únicos presentes na casa eram quatro pessoas próximas à vítima:<br><br>
+
+            <b>Victoria Sinclair</b> – Esposa de Leonard, uma mulher refinada, conhecida por sua frieza e controle emocional.<br>
+            <b>Oliver Grant</b> – O advogado da família, que estava revisando o testamento de Leonard naquela noite.<br>
+            <b>Jonathan Reed</b> – Melhor amigo e sócio da vítima, com quem Leonard teve uma discussão acalorada dias antes.<br>
+            <b>Emma Holloway</b> – A governanta da casa, que trabalhava para a família há mais de 20 anos.<br><br>
+
+            🔎 <b>Fatos e pistas:</b><br>
+            - A vítima segurava um guardanapo amassado com um estranho rabisco: "O último chamado."<br>
+            - A xícara de chá continha traços de cianeto, indicando envenenamento.<br>
+            - O telefone ao lado do corpo tinha um registro de chamada feita às 21h37, mas foi interrompida abruptamente.<br>
+            - Oliver Grant afirmou que estava na sala de estar preparando documentos e não ouviu nada.<br>
+            - Victoria Sinclair alegou que estava em seu quarto tomando um banho longo.<br>
+            - Jonathan Reed disse que saiu para fumar no jardim, retornando apenas quando ouviu um grito.<br>
+            - Emma Holloway jurou que estava na cozinha, preparando o chá da noite, mas não sabia quem o levou para Leonard.<br><br>
+
+            ❗ <b>QUEM É O ASSASSINO?</b><br><br>
+            <i>Errar esse enigma fará você voltar ao começo de tudo! Faça com atenção! Lembre-se: não use letras maiúsculas na resposta.</i>
+        </p>
+
+        <input type="text" id="resposta" placeholder="Digite sua resposta...">
+        <button onclick="verificarResposta()">Enviar</button>
+    </div>
+
+    <div class="dica-container">
+        <button onclick="revelarDica()">Dica</button>
+        <p id="dica">O silêncio pode ser mais revelador do que palavras. Você escutou esse barulho?</p>
+    </div>
+
+    <script>
+        function verificarResposta() {
+            const resposta = document.getElementById("resposta").value.toLowerCase();
+            const respostaCorreta = "oliver grant"; // Altere aqui a resposta correta
+            
+            if (resposta === respostaCorreta) {
+                alert("PARABÉNS! VOCÊ CONSEGUIU!!");
+                window.location.href = 'parabens.html'; // Altere para a próxima página
+            } else {
+                alert("Sinto muito! Você errou... Voltando ao início.");
+                window.location.href = 'site.html'; // Volta para o início
+            }
+        }
+
+        function revelarDica() {
+            var dica = document.getElementById("dica");
+            dica.style.display = dica.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
