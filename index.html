@@ -41,6 +41,26 @@
         button:hover {
             background-color: rgb(100, 180, 60);
         }
+        .tabela-container {
+            margin-top: 50px;
+        }
+        table {
+            width: 60%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: rgb(30, 30, 30);
+            color: white;
+            box-shadow: 0px 0px 10px rgba(124, 206, 69, 0.5);
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: rgb(124, 206, 69);
+            color: black;
+        }
     </style>
     <script>
         // Lista de usuários e senhas
@@ -70,6 +90,17 @@
         <input type="text" id="username" placeholder="Usuário">
         <input type="password" id="password" placeholder="Senha">
         <button onclick="login()">Entrar</button>
+    </div>
+
+    <div class="tabela-container">
+        <h2>Meu obrigado especial aos testadores!</h2>
+        <table>
+            <tr>
+                <th>Usuários</th>
+            </tr>
+            <tr><td>juia</td></tr>
+            <tr><td>fiufiu</td></tr>
+        </table>
     </div>
 </body>
 </html>
